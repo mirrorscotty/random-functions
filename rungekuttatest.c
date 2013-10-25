@@ -19,8 +19,12 @@ int main(int argc, char *argv[])
     y = euler(&f, 0.025, 1, 1, 4);
     PrintVector(y);
     DestroyVector(y);
-    printf("Runge-Kutta Method:\n");
+    printf("Runge-Kutta Method (Second Order):\n");
     y = rungekutta2(&f, .025, 2./3., 1, 1, 4);
+    PrintVector(y);
+    DestroyVector(y);
+    printf("Runge-Kutta Method (Fourth Order):\n");
+    y = rungekutta4(&f, .025, 1, 1, 4);
     PrintVector(y);
     DestroyVector(y);
     return 0;
